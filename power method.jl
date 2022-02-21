@@ -14,7 +14,7 @@ function powermethod(A, max_iter, tol)
           end
       end
     error("Power Method not converged, increase max iterations")
-endhttps://github.com/Chohaa/linalg.jl/blob/main/power%20method.jl
+endh
 
 
 

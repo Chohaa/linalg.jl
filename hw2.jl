@@ -70,6 +70,8 @@ end
 
 # hw2 2
 
+A_g = -2*I(n) + gamma*diagm(ones(n-1,1),1) + (1/gamma)*diagm(ones(n-1,1),-1)
+
 C = diagm([-2,-2,-2,-2,-2,-2,-2,-2]) + diagm(1 => [2,2,2,2,2,2,2], -1 => [1/2,1/2,1/2,1/2,1/2,1/2,1/2])
 
 D = diagm([-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2]) + diagm(1 => [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2], -1 => [1/2,1/2,1/2,1/2,1/2,1/2,1/2,1/2,1/2,1/2,1/2,1/2,1/2,1/2,1/2])
@@ -78,15 +80,36 @@ E = diagm([-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2]) + diagm(1 => [4,4,4
 
 F = diagm([-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2]) + diagm(1 => [8,8,8,8,8,8,8,8,8,8,8,8,8,8,8], -1 => [1/8,1/8,1/8,1/8,1/8,1/8,1/8,1/8,1/8,1/8,1/8,1/8,1/8,1/8,1/8])
 
-(a)
+#(a) Real part of numerical rangw W(A_r): 
 
-(b) function W = numrange (A,M)
+function W = numrange(A,M)
+    theta = LinRange(0, pi, M)  
+    theta = theta(1:M)
+    L = zeros(length(theta),1)   # left support points  
+    R = zeros(length(thera),1)   # right support points
+        for k in 1:M
+            Hk = (exp(1im*theta(k))*C + exp(-1im*theta(k))*C)/2;
+            val, vec = eigen(Hk)
+            lk = max(val)
+        rk = min(val)
+end
+end
 
-(c)
+     #   uk = X(:
+     #   vk =
 
-(d)
+     #   L(k) =
+     #   R(k)
 
-(e)
+        
+
+#(b) 
+
+#(c)
+
+#(d)
+
+#(e)
 
 # hw2. 4
 
